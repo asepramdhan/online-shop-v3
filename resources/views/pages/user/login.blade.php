@@ -24,7 +24,7 @@ new class extends Component {
 
     if (Auth::attempt($credentials)) {
       
-      $this->redirect('/dashboard', navigate:true);
+      $this->redirect('/auth/dashboard', navigate:true);
 
     } else {
         

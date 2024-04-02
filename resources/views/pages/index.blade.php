@@ -12,7 +12,7 @@ new class extends Component {
     $this->products = Product::all();
 
   }
-    
+
 }; 
 
 ?>
