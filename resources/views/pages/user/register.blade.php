@@ -1,12 +1,9 @@
 <?php
 
 use Livewire\Volt\Component;
-use function Laravel\Folio\{middleware};
 use Illuminate\Support\Facades\Hash;
 use Livewire\Attributes\Validate;
 use App\Models\User;  
-
-middleware(['guest']);
 
 new class extends Component {
 

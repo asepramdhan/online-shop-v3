@@ -18,7 +18,7 @@
 
     @auth
 
-    <x-button label="Dashboard" link="/auth/dashboard" class="btn-warning" icon="o-home" />
+    <x-button label="DASHBOARD" icon="o-home" link="/auth/dashboard" class="btn-ghost btn-sm" responsive />
 
     @else
 

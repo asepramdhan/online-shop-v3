@@ -22,9 +22,15 @@ class FolioServiceProvider extends ServiceProvider
     {
         Folio::path(resource_path('views/pages'))->middleware([
 
-            'dashboard/*' => [
+            'auth/*' => [
 
                 'auth'
+
+            ],
+
+            'user/*' => [
+
+                'guest'
 
             ],
 

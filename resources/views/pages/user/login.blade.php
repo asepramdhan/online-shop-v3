@@ -2,13 +2,10 @@
 
 use Livewire\Volt\Component;
 use function Laravel\Folio\name;
-use function Laravel\Folio\{middleware};
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 
 name('login');
-
-middleware(['guest']);
 
 new class extends Component {
 
