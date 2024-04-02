@@ -3,7 +3,7 @@
 use Livewire\Volt\Component;
 use function Laravel\Folio\name;
 
-name('account');
+name('messages');
 
 new class extends Component {
 
@@ -13,16 +13,16 @@ new class extends Component {
 
 ?>
 
-<x-dashboard-layout>
+<x-messages-layout>
 
   @volt
 
   <div>
 
-    Account Page
+    Messages Page
 
   </div>
 
   @endvolt
 
-</x-dashboard-layout>
+</x-messages-layout>

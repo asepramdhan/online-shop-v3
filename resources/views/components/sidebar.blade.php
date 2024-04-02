@@ -18,7 +18,7 @@
 
 ?>
 
-<x-slot:sidebar drawer="main-drawer" collapsible class="bg-base-200">
+<x-slot:sidebar collapsible class="bg-base-200">
 
   @if($user = auth()->user())
 
@@ -60,7 +60,7 @@
 
       <x-menu-item title="Integration" icon="o-puzzle-piece" link="/auth/settings/integration" />
 
-      <x-menu-item title="Account" icon="o-user" link="/auth/settings/account" />
+      <x-menu-item title="Account" icon="o-user" link="/auth/settings/account/{{ auth()->user()->id }}" />
 
     </x-menu-sub>
 

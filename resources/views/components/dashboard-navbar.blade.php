@@ -22,9 +22,9 @@
 
   <x-slot:actions>
 
-    <x-button label="Messages" icon="o-envelope" link="###" class="btn-ghost btn-sm" responsive />
+    <x-button label="Messages" icon="o-envelope" link="/auth/messages" class="btn-ghost btn-sm" responsive />
 
-    <x-button label="Notifications" icon="o-bell" link="###" class="btn-ghost btn-sm" responsive />
+    <x-button label="Notifications" icon="o-bell" link="/auth/notifications" class="btn-ghost btn-sm" responsive />
 
   </x-slot:actions>
 
