@@ -57,7 +57,7 @@ new class extends Component {
 
           <x-slot:actions>
 
-            <x-button label="Register" class="btn-primary" type="submit" spinner="Register" />
+            <x-button label="Register" class="btn-primary" type="submit" spinner="register" />
 
           </x-slot:actions>
 

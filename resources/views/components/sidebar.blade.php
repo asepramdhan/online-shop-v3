@@ -46,15 +46,21 @@
 
   <x-menu activate-by-route>
 
-    <x-menu-item title="Home" icon="o-home" link="###" />
+    <x-menu-item title="Dashboard" icon="o-home" link="/auth/dashboard" />
 
-    <x-menu-item title="Messages" icon="o-envelope" link="###" />
+    <x-menu-item title="Orders" icon="o-document-text" link="/auth/orders" />
+
+    <x-menu-item title="Products" icon="o-shopping-cart" link="/auth/products" />
+
+    <x-menu-item title="Customers" icon="o-users" link="/auth/customers" />
+
+    <x-menu-item title="Reports" icon="o-chart-pie" link="/auth/reports" />
 
     <x-menu-sub title="Settings" icon="o-cog-6-tooth">
 
-      <x-menu-item title="Wifi" icon="o-wifi" link="####" />
+      <x-menu-item title="Integration" icon="o-puzzle-piece" link="/auth/settings/integration" />
 
-      <x-menu-item title="Archives" icon="o-archive-box" link="####" />
+      <x-menu-item title="Account" icon="o-user" link="/auth/settings/account" />
 
     </x-menu-sub>
 

@@ -1,6 +1,9 @@
 <?php
 
 use Livewire\Volt\Component;
+use function Laravel\Folio\name;
+
+name('integration');
 
 new class extends Component {
 
@@ -16,7 +19,7 @@ new class extends Component {
 
   <div>
 
-    //
+    Integration Page
 
   </div>
 

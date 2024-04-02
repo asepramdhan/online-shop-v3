@@ -10,7 +10,7 @@
 
     <div>
 
-      <a wire:navigate href="/dashboard">
+      <a wire:navigate href="/auth/dashboard">
 
         ONLINE SHOP
 
