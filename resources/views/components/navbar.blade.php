@@ -2,15 +2,9 @@
 
   <x-slot:brand>
 
-    <label for="main-drawer" class="lg:hidden mr-3">
-
-      <x-icon name="o-bars-3" class="cursor-pointer" />
-
-    </label>
-
     <div>
 
-      <a href="/">
+      <a wire:navigate href="/">
 
         ONLINE SHOP
 
