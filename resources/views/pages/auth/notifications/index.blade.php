@@ -19,7 +19,7 @@ new class extends Component {
 
   <div>
 
-    Notifications Page
+    <x-header title="Notifications" subtitle="notifications front page" size="text-xl" separator />
 
   </div>
 

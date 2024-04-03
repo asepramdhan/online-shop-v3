@@ -19,7 +19,7 @@ new class extends Component {
 
   <div>
 
-    Customers Page
+    <x-header title="Customers" subtitle="customers front page" size="text-xl" separator />
 
   </div>
 

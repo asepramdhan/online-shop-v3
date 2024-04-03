@@ -52,6 +52,8 @@ new class extends Component {
 
   <div>
 
+    <x-header title="Account Settings" subtitle="Account settings home page" size="text-xl" separator />
+
     <x-form wire:submit="save">
 
       <x-input label="Name" wire:model="name" />

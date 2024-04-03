@@ -19,7 +19,7 @@ new class extends Component {
 
   <div>
 
-    Integration Page
+    <x-header title="Integration Settings" subtitle="integration settings front page" size="text-xl" separator />
 
   </div>
 

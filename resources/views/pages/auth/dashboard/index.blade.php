@@ -19,7 +19,7 @@ new class extends Component {
 
   <div>
 
-    Dashboard Page
+    <x-header title="Dashboard" subtitle="dashboard front page" size="text-xl" separator />
 
   </div>
 
