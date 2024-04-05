@@ -8,7 +8,6 @@ new class extends Component {
   use WithFileUploads;
   #[Validate('required')]
   public $title, $body;
-  #[Validate('required|image|max:1024')]
   public $image;
   public $product;
   public $config = [
@@ -24,8 +23,18 @@ new class extends Component {
     $validatedData['slug'] = Str::slug($validatedData['title'], '-');
     $randomString = substr(str_shuffle(str_repeat("abcdefghijklmnopqrstuvwxyz0123456789", 10)), 0, 10);
     $validatedData['slug'] = $validatedData['slug'] . '-' . $randomString;
-    $validatedData['image'] = $this->image->store(path: 'images');
-    $this->product->update($validaredData);
+    // buat kondisi jika gambar tidak diganti
+    if ($this->image == null) {
+      $validatedData['image'] = $this->product->image;
+    } else {
+      // hapus gambar lama jika ada
+      if ($this->product->image) {
+        Storage::disk('public')->delete($this->product->image);
+      }
+      // simpan gambar baru
+      $validatedData['image'] = $this->image->store(path: 'images');
+    }
+    $this->product->update($validatedData);
     session()->flash('success', 'Produk berhasil diupdate!');
     $this->redirect('/auth/products',navigate:true);
   }
