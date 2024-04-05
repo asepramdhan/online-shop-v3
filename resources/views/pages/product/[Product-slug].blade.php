@@ -20,13 +20,15 @@ new class extends Component {
 
       <div class="md:col-start-2 md:col-span-4">
 
-        <x-card title="Nice things">
+        <h3 class="text-2xl">{{ $product->title }}</h3>
 
-          Detail Product Pages ({{ $product->id }})
+        <x-card class="mt-3">
+
+          {!! $product->body !!}
 
           <x-slot:figure>
 
-            <img src="/img/3/2.jpeg" alt="busana-muslim" />
+            <img src="{{ asset('storage/' . $product->image) }}" alt="busana-muslim" />
 
           </x-slot:figure>
 

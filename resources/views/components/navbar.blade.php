@@ -24,7 +24,7 @@
 
     <x-button label="LOGIN" icon="o-user" link="/user/login" class="btn-ghost btn-sm" responsive />
 
-    <x-button label="REGISTER" icon="o-user-plus" link="/user/register" class="btn-warning btn-sm" responsive />
+    <x-button label="REGISTER" icon="o-user-plus" link="/user/register" class="btn-warning btn-sm" />
 
     @endauth
 

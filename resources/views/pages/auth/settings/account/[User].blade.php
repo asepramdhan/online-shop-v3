@@ -32,9 +32,9 @@ new class extends Component {
 
   public function save() {
 
-    $validateData = $this->validate();
+    $validatedData = $this->validate();
     
-    $validateData['avatar'] = $this->avatar->store(path: 'avatars');
+    $validatedData['avatar'] = $this->avatar->store(path: 'avatars');
 
     Auth::user()->update($validateData);
 

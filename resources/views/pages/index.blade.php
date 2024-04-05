@@ -23,17 +23,17 @@ new class extends Component {
 
   <div>
 
-    @foreach ($products as $product)
-
     <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
 
-      <x-card title="Nice things">
+      @foreach ($products as $product)
+
+      <x-card title="{{ $product->title }}">
 
         I am using slots here.
 
         <x-slot:figure>
 
-          <img src="/img/3/2.jpeg" alt="busana-muslim" />
+          <img src="{{ asset('storage/' . $product->image) }}" alt="busana-muslim" />
 
         </x-slot:figure>
 
@@ -45,9 +45,9 @@ new class extends Component {
 
       </x-card>
 
-    </div>
+      @endforeach
 
-    @endforeach
+    </div>
 
   </div>
 
