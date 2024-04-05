@@ -7,6 +7,7 @@ use Livewire\Attributes\On;
 name('products');
 new class extends Component {
   use WithPagination;
+  public bool $deleteModal = false;
   public $products, $headers;
   public function mount() {
     $this->products = Product::all();
@@ -18,6 +19,11 @@ new class extends Component {
   }
   public function delete($id) {
     $this->products->find($id)->delete();
+    // hapus juga gambar yang ada di storage
+    $image = $this->products->find($id)->image;
+    if ($image) {
+      Storage::disk('public')->delete($image);
+    }
     $this->dispatch('produks');
   }
   #[On('produks')] 
@@ -72,8 +78,13 @@ new class extends Component {
       @scope('actions', $product)
       <div class="flex gap-2">
         <x-button icon="o-pencil" class="btn-sm" link="/auth/products/edit/{{ $product->id }}" />
-        <x-button icon="o-trash" wire:click="delete({{ $product->id }})" spinner class="btn-sm" />
+        <x-button icon="o-trash" @click="$wire.deleteModal = true" class="btn-sm" />
       </div>
+      <x-modal wire:model="deleteModal" class="backdrop-blur" class="text-center">
+        <div class="mb-5">Apakah anda yakin ingin menghapus produk ini?</div>
+        <x-button label="Cancel" @click="$wire.deleteModal = false" />
+        <x-button label="Delete" @click="$wire.deleteModal = false; $wire.delete({{ $product->id }})" />
+      </x-modal>
       @endscope
     </x-table>
   </div>

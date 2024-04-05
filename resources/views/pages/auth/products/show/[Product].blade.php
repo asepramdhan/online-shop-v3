@@ -8,7 +8,7 @@ new class extends Component {
   @volt
   <div>
     <h3 class="text-xl mb-3">{{ $product->title }}</h3>
-    <div class="grid grid-cols-2 mb-3">
+    <div class="grid grid-cols-1 mb-3">
       <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->title }}">
     </div>
     <p>
